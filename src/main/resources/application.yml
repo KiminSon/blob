@@ -1,8 +1,16 @@
 spring:
   application:
     name: blob
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
 azure:
   storage:
     account-name: ${AZURE_STORAGE_ACCOUNT_NAME}
     account-key: ${AZURE_STORAGE_ACCOUNT_KEY}
+    endpoint: ${AZURE_STORAGE_ENDPOINT}
     container-name: ${AZURE_STORAGE_CONTAINER_NAME}
+    sas-token: ${AZURE_STORAGE_SAS_TOKEN}
