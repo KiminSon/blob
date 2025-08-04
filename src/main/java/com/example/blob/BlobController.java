@@ -15,7 +15,7 @@ public class BlobController {
     @PostMapping("/upload")
     public ResponseEntity<String> upload(@RequestParam MultipartFile file) throws Exception {
         String url = blobService.uploadFile(file);
-        return ResponseEntity.ok(url); // 필요시 SAS 붙인 URL로 가공 가능
+        return ResponseEntity.ok(url);
     }
 
     @GetMapping("/download")
